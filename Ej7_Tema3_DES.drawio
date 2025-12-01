@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="0" name="Page-1">
+    <mxGraphModel dx="827" dy="1169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- PlataformaNaval -->
+        <mxCell id="2" value="&lt;b&gt;PlataformaNaval&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;pais: String&lt;br/&gt;eslora: float&lt;br/&gt;desplazamiento: float&lt;br/&gt;velocidadMaxima: float&lt;br/&gt;---&lt;br/&gt;navegar(rumbo: float, velocidad: float)&lt;br/&gt;detenerse()&lt;br/&gt;recibirDanio(puntos: int)&lt;br/&gt;estaOperativa()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Fragata -->
+        <mxCell id="3" value="&lt;b&gt;Fragata&lt;/b&gt;&lt;br/&gt;misilesAntiaereos: int&lt;br/&gt;helicopterosEmb: int&lt;br/&gt;rolPrincipal: String&lt;br/&gt;---&lt;br/&gt;dispararMisilAA()&lt;br/&gt;despegarHelicoptero()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="220" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Corbeta -->
+        <mxCell id="4" value="&lt;b&gt;Corbeta&lt;/b&gt;&lt;br/&gt;misilesAntibuque: int&lt;br/&gt;autonomiaDias: int&lt;br/&gt;---&lt;br/&gt;dispararMisilAntibuque()&lt;br/&gt;realizarPatrulla(costera: boolean)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="210" width="220" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Submarino -->
+        <mxCell id="5" value="&lt;b&gt;Submarino&lt;/b&gt;&lt;br/&gt;profundidadMaxima: int&lt;br/&gt;tipoPropulsion: String&lt;br/&gt;tubosLanzatorpedos: int&lt;br/&gt;---&lt;br/&gt;sumergirse(profundidad: int)&lt;br/&gt;emerger()&lt;br/&gt;lanzarTorpedo()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="220" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- SistemaArmas -->
+        <mxCell id="6" value="&lt;b&gt;SistemaArmas&lt;/b&gt;&lt;br/&gt;numCanones: int&lt;br/&gt;numMisiles: int&lt;br/&gt;numTorpedos: int&lt;br/&gt;---&lt;br/&gt;seleccionarObjetivo(idObjetivo: int)&lt;br/&gt;dispararArma(tipo: String)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- SistemaSensores -->
+        <mxCell id="7" value="&lt;b&gt;SistemaSensores&lt;/b&gt;&lt;br/&gt;tieneRadar: boolean&lt;br/&gt;tieneSonar: boolean&lt;br/&gt;rangoDeteccionKm: float&lt;br/&gt;---&lt;br/&gt;escanearSuperficie()&lt;br/&gt;escanearSubmarino()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Flota -->
+        <mxCell id="8" value="&lt;b&gt;Flota&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;zonaOperacion: String&lt;br/&gt;---&lt;br/&gt;agregarPlataforma(p: PlataformaNaval)&lt;br/&gt;retirarPlataforma(p: PlataformaNaval)&lt;br/&gt;ordenarAtaque()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="240" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Capitan -->
+        <mxCell id="9" value="&lt;b&gt;Capitan&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;rango: String&lt;br/&gt;aniosExperiencia: int&lt;br/&gt;---&lt;br/&gt;darOrden(orden: String)&lt;br/&gt;asumirMando(plataforma: PlataformaNaval)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="620" y="260" width="240" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Herencia edges (triangle) -->
+        <mxCell id="20" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Composición: PlataformaNaval 1 --- 1 SistemaArmas and SistemaSensores -->
+        <mxCell id="23" style="startArrow=diamondThin;startFill=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" style="startArrow=diamondThin;startFill=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Agregación: Flota agregates Plataformas (0..*), multiplicidad labels -->
+        <mxCell id="25" style="startArrow=diamondThin;startFill=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="8" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Asociación: Capitan <-> PlataformaNaval (1..1) -->
+        <mxCell id="26" style="html=1;strokeColor=#000000;" edge="1" parent="1" source="9" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Labels for multiplicities (simple mxCell vertices near edges) -->
+        <mxCell id="30" value="1" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="740" y="200" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="0..*" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="560" y="90" width="38" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
