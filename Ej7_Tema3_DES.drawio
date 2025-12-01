@@ -1,86 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net">
-  <diagram id="0" name="Page-1">
-    <mxGraphModel dx="827" dy="1169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+<mxfile host="app.diagrams.net" modified="2025-12-01T00:00:00.000Z" agent="5.0" version="24.0.0" type="device">
+  <diagram name="Page-1" id="c7558073-e3ba-dd00-9f61-feee35204465">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="WIyWlLlzoAwqoGpmTwpO" parent="0" value="" name="0" visible="1" />
+        <mxCell id="WIyWlLlzoAwqoGpmTwpO_1" parent="WIyWlLlzoAwqoGpmTwpO" />
 
-        <!-- PlataformaNaval -->
-        <mxCell id="2" value="&lt;b&gt;PlataformaNaval&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;pais: String&lt;br/&gt;eslora: float&lt;br/&gt;desplazamiento: float&lt;br/&gt;velocidadMaxima: float&lt;br/&gt;---&lt;br/&gt;navegar(rumbo: float, velocidad: float)&lt;br/&gt;detenerse()&lt;br/&gt;recibirDanio(puntos: int)&lt;br/&gt;estaOperativa()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#fff2cc;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="260" height="170" as="geometry" />
+        <!-- PlataformaNaval (superclase) -->
+        <mxCell id="clase_plataforma" value="PlataformaNaval" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#fff2cc;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="40" y="40" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_plataforma" value="+ nombre: String&#xa;+ pais: String&#xa;+ eslora: float&#xa;+ desplazamiento: float&#xa;+ velocidadMaxima: float&#xa;- _integridad: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_plataforma">
+          <mxGeometry y="26" width="280" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_plataforma" value="" style="line;strokeColor=#000000;strokeWidth=1" vertex="1" parent="clase_plataforma">
+          <mxGeometry y="130" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_plataforma" value="+ navegar(rumbo: float, velocidad: float): void&#xa;+ detenerse(): void&#xa;+ recibirDanio(puntos: int): void&#xa;+ estaOperativa(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_plataforma">
+          <mxGeometry y="131" width="280" height="69" as="geometry" />
         </mxCell>
 
         <!-- Fragata -->
-        <mxCell id="3" value="&lt;b&gt;Fragata&lt;/b&gt;&lt;br/&gt;misilesAntiaereos: int&lt;br/&gt;helicopterosEmb: int&lt;br/&gt;rolPrincipal: String&lt;br/&gt;---&lt;br/&gt;dispararMisilAA()&lt;br/&gt;despegarHelicoptero()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="340" y="40" width="220" height="150" as="geometry" />
+        <mxCell id="clase_fragata" value="Fragata" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="400" y="40" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_fragata" value="+ misilesAntiaereos: int&#xa;+ helicopterosEmb: int&#xa;+ rolPrincipal: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_fragata">
+          <mxGeometry y="26" width="280" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_fragata" value="" style="line;strokeColor=#000000;strokeWidth=1" vertex="1" parent="clase_fragata">
+          <mxGeometry y="90" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_fragata" value="+ dispararMisilAA(): boolean&#xa;+ despegarHelicoptero(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_fragata">
+          <mxGeometry y="91" width="280" height="69" as="geometry" />
         </mxCell>
 
         <!-- Corbeta -->
-        <mxCell id="4" value="&lt;b&gt;Corbeta&lt;/b&gt;&lt;br/&gt;misilesAntibuque: int&lt;br/&gt;autonomiaDias: int&lt;br/&gt;---&lt;br/&gt;dispararMisilAntibuque()&lt;br/&gt;realizarPatrulla(costera: boolean)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="340" y="210" width="220" height="150" as="geometry" />
+        <mxCell id="clase_corbeta" value="Corbeta" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="400" y="230" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_corbeta" value="+ misilesAntibuque: int&#xa;+ autonomiaDias: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_corbeta">
+          <mxGeometry y="26" width="280" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_corbeta" value="" style="line;strokeColor:#000000;strokeWidth=1" vertex="1" parent="clase_corbeta">
+          <mxGeometry y="80" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_corbeta" value="+ dispararMisilAntibuque(): boolean&#xa;+ realizarPatrulla(costera: boolean): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_corbeta">
+          <mxGeometry y="81" width="280" height="69" as="geometry" />
         </mxCell>
 
         <!-- Submarino -->
-        <mxCell id="5" value="&lt;b&gt;Submarino&lt;/b&gt;&lt;br/&gt;profundidadMaxima: int&lt;br/&gt;tipoPropulsion: String&lt;br/&gt;tubosLanzatorpedos: int&lt;br/&gt;---&lt;br/&gt;sumergirse(profundidad: int)&lt;br/&gt;emerger()&lt;br/&gt;lanzarTorpedo()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#d5e8d4;" vertex="1" parent="1">
-          <mxGeometry x="340" y="380" width="220" height="170" as="geometry" />
+        <mxCell id="clase_submarino" value="Submarino" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#d5e8d4;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="400" y="420" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_submarino" value="+ profundidadMaxima: int&#xa;+ tipoPropulsion: String&#xa;+ tubosLanzatorpedos: int&#xa;- profundido: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_submarino">
+          <mxGeometry y="26" width="280" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_submarino" value="" style="line;strokeColor=#000000;strokeWidth=1" vertex="1" parent="clase_submarino">
+          <mxGeometry y="100" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_submarino" value="+ sumergirse(profundidad: int): boolean&#xa;+ emerger(): boolean&#xa;+ lanzarTorpedo(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_submarino">
+          <mxGeometry y="101" width="280" height="69" as="geometry" />
         </mxCell>
 
-        <!-- SistemaArmas -->
-        <mxCell id="6" value="&lt;b&gt;SistemaArmas&lt;/b&gt;&lt;br/&gt;numCanones: int&lt;br/&gt;numMisiles: int&lt;br/&gt;numTorpedos: int&lt;br/&gt;---&lt;br/&gt;seleccionarObjetivo(idObjetivo: int)&lt;br/&gt;dispararArma(tipo: String)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#e1d5e7;" vertex="1" parent="1">
-          <mxGeometry x="40" y="240" width="240" height="140" as="geometry" />
+        <!-- SistemaArmas (Composición) -->
+        <mxCell id="clase_armas" value="SistemaArmas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="40" y="280" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_armas" value="+ numCanones: int&#xa;+ numMisiles: int&#xa;+ numTorpedos: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_armas">
+          <mxGeometry y="26" width="280" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_armas" value="" style="line;strokeColor=#000000;strokeWidth=1" vertex="1" parent="clase_armas">
+          <mxGeometry y="90" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_armas" value="+ seleccionarObjetivo(idObjetivo: int): int&#xa;+ dispararArma(tipo: String): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_armas">
+          <mxGeometry y="91" width="280" height="59" as="geometry" />
         </mxCell>
 
-        <!-- SistemaSensores -->
-        <mxCell id="7" value="&lt;b&gt;SistemaSensores&lt;/b&gt;&lt;br/&gt;tieneRadar: boolean&lt;br/&gt;tieneSonar: boolean&lt;br/&gt;rangoDeteccionKm: float&lt;br/&gt;---&lt;br/&gt;escanearSuperficie()&lt;br/&gt;escanearSubmarino()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#e1d5e7;" vertex="1" parent="1">
-          <mxGeometry x="40" y="410" width="240" height="140" as="geometry" />
+        <!-- SistemaSensores (Composición) -->
+        <mxCell id="clase_sensores" value="SistemaSensores" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#e1d5e7;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="40" y="460" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_sensores" value="+ tieneRadar: boolean&#xa;+ tieneSonar: boolean&#xa;+ rangoDeteccionKm: float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_sensores">
+          <mxGeometry y="26" width="280" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_sensores" value="" style="line;strokeColor=#000000;strokeWidth=1" vertex="1" parent="clase_sensores">
+          <mxGeometry y="90" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_sensores" value="+ escanearSuperficie(): boolean&#xa;+ escanearSubmarino(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_sensores">
+          <mxGeometry y="91" width="280" height="59" as="geometry" />
         </mxCell>
 
-        <!-- Flota -->
-        <mxCell id="8" value="&lt;b&gt;Flota&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;zonaOperacion: String&lt;br/&gt;---&lt;br/&gt;agregarPlataforma(p: PlataformaNaval)&lt;br/&gt;retirarPlataforma(p: PlataformaNaval)&lt;br/&gt;ordenarAtaque()" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#ffe6cc;" vertex="1" parent="1">
-          <mxGeometry x="620" y="40" width="240" height="170" as="geometry" />
+        <!-- Flota (Agregación) -->
+        <mxCell id="clase_flota" value="Flota" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#ffe6cc;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="760" y="40" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_flota" value="+ nombre: String&#xa;+ zonaOperacion: String&#xa;- plataformas: List&lt;PlataformaNaval&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_flota">
+          <mxGeometry y="26" width="280" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_flota" value="" style="line;strokeColor:#000000;strokeWidth=1" vertex="1" parent="clase_flota">
+          <mxGeometry y="100" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_flota" value="+ agregarPlataforma(p: PlataformaNaval): void&#xa;+ retirarPlataforma(p: PlataformaNaval): void&#xa;+ ordenarAtaque(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_flota">
+          <mxGeometry y="101" width="280" height="59" as="geometry" />
         </mxCell>
 
-        <!-- Capitan -->
-        <mxCell id="9" value="&lt;b&gt;Capitan&lt;/b&gt;&lt;br/&gt;nombre: String&lt;br/&gt;rango: String&lt;br/&gt;aniosExperiencia: int&lt;br/&gt;---&lt;br/&gt;darOrden(orden: String)&lt;br/&gt;asumirMando(plataforma: PlataformaNaval)" style="rounded=0;whiteSpace=html;align=left;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#ffe6cc;" vertex="1" parent="1">
-          <mxGeometry x="620" y="260" width="240" height="140" as="geometry" />
+        <!-- Capitán (Asociación) -->
+        <mxCell id="clase_capitan" value="Capitán" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeColor=#000000;strokeWidth=1;fillColor=#ffe6cc;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="760" y="240" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_capitan" value="+ nombre: String&#xa;+ rango: String&#xa;+ aniosExperiencia: int&#xa;- plataforma: PlataformaNaval" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_capitan">
+          <mxGeometry y="26" width="280" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_capitan" value="" style="line;strokeColor:#000000;strokeWidth=1" vertex="1" parent="clase_capitan">
+          <mxGeometry y="100" width="280" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="methods_capitan" value="+ darOrden(orden: String): void&#xa;+ asumirMando(plataforma: PlataformaNaval): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="clase_capitan">
+          <mxGeometry y="101" width="280" height="39" as="geometry" />
         </mxCell>
 
-        <!-- Herencia edges (triangle) -->
-        <mxCell id="20" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="3">
+        <!-- RELACIONES -->
+
+        <!-- Herencia: PlataformaNaval -> Fragata -->
+        <mxCell id="herencia_fragata" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;strokeWidth=2;exitX=1;exitY=0;entryX=0;entryY=1" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_plataforma" target="clase_fragata">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="21" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="4">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="22" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="5">
+
+        <!-- Herencia: PlataformaNaval -> Corbeta -->
+        <mxCell id="herencia_corbeta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_plataforma" target="clase_corbeta">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- Composición: PlataformaNaval 1 --- 1 SistemaArmas and SistemaSensores -->
-        <mxCell id="23" style="startArrow=diamondThin;startFill=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="24" style="startArrow=diamondThin;startFill=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="2" target="7">
+        <!-- Herencia: PlataformaNaval -> Submarino -->
+        <mxCell id="herencia_submarino" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;strokeWidth=2;exitX=1;exitY=1;entryX=0;entryY=0" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_plataforma" target="clase_submarino">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- Agregación: Flota agregates Plataformas (0..*), multiplicidad labels -->
-        <mxCell id="25" style="startArrow=diamondThin;startFill=0;html=1;strokeColor=#000000;" edge="1" parent="1" source="8" target="2">
+        <!-- Composición: PlataformaNaval -> SistemaArmas -->
+        <mxCell id="composicion_armas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamondThin;endFill=1;startArrow=none;strokeWidth=2" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_plataforma" target="clase_armas">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- Asociación: Capitan <-> PlataformaNaval (1..1) -->
-        <mxCell id="26" style="html=1;strokeColor=#000000;" edge="1" parent="1" source="9" target="2">
+        <!-- Composición: PlataformaNaval -> SistemaSensores -->
+        <mxCell id="composicion_sensores" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamondThin;endFill=1;startArrow=none;strokeWidth=2" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_plataforma" target="clase_sensores">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
 
-        <!-- Labels for multiplicities (simple mxCell vertices near edges) -->
-        <mxCell id="30" value="1" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="740" y="200" width="20" height="20" as="geometry" />
+        <!-- Agregación: Flota -> PlataformaNaval -->
+        <mxCell id="agregacion_flota" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=diamondThin;endFill=0;startArrow=none;strokeWidth=2" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_flota" target="clase_plataforma">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="31" value="0..*" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="560" y="90" width="38" height="20" as="geometry" />
+
+        <!-- Asociación: Capitán <-> PlataformaNaval -->
+        <mxCell id="asociacion_capitan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;strokeWidth=2" edge="1" parent="WIyWlLlzoAwqoGpmTwpO_1" source="clase_capitan" target="clase_plataforma">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Multiplicidades -->
+        <mxCell id="mult_1_1_armas" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="160" y="240" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mult_1_sensores" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="160" y="440" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mult_0_flota" value="0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="400" y="110" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mult_1_capitan" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLlzoAwqoGpmTwpO_1">
+          <mxGeometry x="400" y="160" width="30" height="20" as="geometry" />
         </mxCell>
 
       </root>
